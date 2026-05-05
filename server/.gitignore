@@ -1,0 +1,18 @@
+# env files
+.env
+*.env
+server/.env
+client/.env
+
+# node
+node_modules/
+server/node_modules/
+client/node_modules/
+
+# build
+dist/
+build/
+
+# database
+*.sqlite
+*.db
