@@ -279,7 +279,7 @@ app.get("/api/ai-insight", authMiddleware, async (req, res) => {
         } catch (aiError) {
           console.error("AI failed:", aiError.response?.data || aiError.message);
 
-          // ✅ fallback במקום לשבור הכל
+          //  fallback 
           return res.json({
             source: "fallback",
             insight: `Market is volatile. As a ${investorType}, focus on risk management and trends in ${assets.join(", ")}`,
