@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://ai-crypto-advisor-6bel.onrender.com",
+  baseURL: "https://ai-crypto-advisor-6bel.onrender.com/api",
 });
 
 api.interceptors.request.use((config) => {
