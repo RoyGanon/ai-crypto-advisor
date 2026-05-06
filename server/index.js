@@ -389,6 +389,23 @@ app.post("/api/votes", authMiddleware, (req, res) => {
   );
 });
 
+app.get("/api/users", (req, res) => {
+  db.all(
+    "SELECT id, name, email, created_at FROM users",
+    [],
+    (err, rows) => {
+      if (err) {
+        return res.status(500).json({
+          message: "Database error",
+          error: err.message,
+        });
+      }
+
+      res.json(rows);
+    }
+  );
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
