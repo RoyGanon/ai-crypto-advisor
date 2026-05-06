@@ -103,3 +103,24 @@ The AI tools helped with:
 - Supporting deployment configuration and environment setup
 
 The coding process was guided by my own decisions and implementation direction, while the AI tools assisted by suggesting solutions, explaining errors, and helping accelerate development.
+
+
+# Future AI Training & Feedback Improvements
+
+As a future improvement, the platform could include a feedback and training pipeline connected to the dashboard system.
+
+The application already stores user preferences and voting interactions, which could later be used as feedback signals for improving AI recommendation quality over time.
+
+Possible future flow:
+- Users interact with crypto recommendations and dashboard content
+- User actions such as likes/dislikes, selected assets, onboarding preferences, and engagement are stored in the database
+- Feedback data is collected and analyzed periodically
+- The collected information can later be used to:
+  - Improve recommendation accuracy
+  - Personalize content for different investor types
+  - Train or fine-tune machine learning models
+  - Detect user interest trends and behavioral patterns
+
+For example, if users with similar onboarding preferences consistently engage with specific crypto assets or content types, the system could learn to prioritize similar recommendations for future users.
+
+Currently, the application stores user interaction data inside the SQLite database, which creates a foundation for future analytics and AI model improvement pipelines.
