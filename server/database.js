@@ -35,9 +35,9 @@ db.serialize(() => {
   CREATE TABLE IF NOT EXISTS preferences (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
-    favorite_coins TEXT,
-    risk_level TEXT,
-    content_types TEXT,
+    assets TEXT,
+    investor_type TEXT,
+    content_type TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id)
   )
