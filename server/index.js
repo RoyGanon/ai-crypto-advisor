@@ -32,8 +32,9 @@ app.post("/api/auth/register", async (req, res) => {
     [name, email, hashedPassword],
     function (err) {
       if (err) {
-        return res.status(400).json({ message: "Email already exists" });
-      }
+    console.error("Register DB error:", err.message);
+    return res.status(400).json({ message: err.message });
+  }
 
       res.status(201).json({
         message: "User registered successfully",
