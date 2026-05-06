@@ -1,16 +1,105 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# AI Crypto Advisor
 
-Currently, two official plugins are available:
+## Overview
+AI Crypto Advisor is a full-stack web application that allows users to:
+- Register and log in securely
+- Save crypto investment preferences
+- Store onboarding selections in a database
+- Manage personalized crypto-related content
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project was built using a React frontend and a Node.js + Express backend with SQLite as the database.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# About The Project
 
-## Expanding the ESLint configuration
+AI Crypto Advisor is a personalized crypto onboarding and preference management platform.  
+The application helps users define their crypto interests, investment style, and preferred content categories in order to create a more customized crypto experience.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Users can:
+- Create an account and log in securely
+- Complete an onboarding flow
+- Select favorite crypto assets
+- Choose investment preferences and content interests
+- Save their preferences into a database
+
+The system includes authentication, API communication between frontend and backend, persistent database storage, and full deployment to production environments.
+
+---
+
+# Live Deployment
+
+## Frontend
+https://ai-crypto-advisor.netlify.app/
+
+## Backend
+https://ai-crypto-advisor-6bel.onrender.com/
+
+---
+
+# API Endpoints
+
+## Get Users
+GET https://ai-crypto-advisor-6bel.onrender.com/api/users
+
+## Register User
+POST /api/auth/register
+
+## Login User
+POST /api/auth/login
+
+## Save Preferences
+POST /api/preferences
+
+---
+
+# Tech Stack
+
+## Frontend
+- React
+- React Router
+- Axios
+- Vite
+
+## Backend
+- Node.js
+- Express.js
+- SQLite3
+- JWT Authentication
+- bcrypt
+
+## Deployment
+- Netlify (Frontend)
+- Render (Backend)
+
+---
+
+# Database
+
+The application uses SQLite as the database.
+
+Tables:
+- users
+- preferences
+- votes
+
+The database is automatically created when the backend server starts.
+
+---
+
+
+# AI Tools Usage Summary
+
+During this assignment, AI tools such as ChatGPT and Claude were used as development assistants throughout the project.
+
+I designed and planned the project architecture, application structure, and overall flow independently.  
+The AI tools were used as collaborative development assistants to help implement and improve parts of the system during development.
+
+The AI tools helped with:
+- Writing and improving parts of the frontend and backend code
+- Solving deployment problems with Netlify and Render
+- Understanding SQLite database behavior in production
+- Supporting deployment configuration and environment setup
+
+The coding process was guided by my own decisions and implementation direction, while the AI tools assisted by suggesting solutions, explaining errors, and helping accelerate development.
